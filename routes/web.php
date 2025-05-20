@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -23,3 +24,6 @@ Route::get('/login', [AuthController::class, 'tampilLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'submitLogin'])->name('login.submit');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// admin
+ Route::get('/dashboard-admin', [AdminController::class, 'dashboardAdmin'])->name('admin.dashboard');
