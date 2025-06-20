@@ -106,7 +106,7 @@ public function submitLogin(Request $request)
         } elseif ($user->role === 'penyewa') {
             return redirect()->intended('/beranda');
         }elseif ($user->role === 'pemiliktoko') {
-            return redirect()->intended('/beranda');
+            return redirect()->intended('/dashboard-toko');
         } else {
             Auth::logout(); // jika role tidak valid
             return redirect('/login')->withErrors([

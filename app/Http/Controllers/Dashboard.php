@@ -10,6 +10,11 @@ class Dashboard extends Controller
 {
     return view('index');
 }
+  public function koleksi1()
+{
+    return view('koleksi');
+}
+
     //
 }
 
